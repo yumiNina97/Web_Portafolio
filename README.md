@@ -41,4 +41,9 @@ El diseño de una interfaz de usuario efectiva es crucial para el éxito de cual
 
 Puedes acceder al diseño completo y al prototipo interactivo a través del siguiente enlace:
 
-🔗 Ver Proyecto en Figma
+## Diseño de Interfaz en Figma
+
+Puedes ver el prototipo completo en el siguiente enlace:
+
+🔗 [Ver en Figma](https://www.figma.com/design/oL7finvp4L0YkjKQ7K7iZy/Untitled?node-id=1-1481&t=AwXAxoDCZbDqnc13-1)
+
