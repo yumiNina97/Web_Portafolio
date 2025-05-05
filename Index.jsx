@@ -7,48 +7,54 @@ import { CardsWrapper } from "./CardsWrapper";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { TextContentHeading } from "./TextContentHeading";
-import estudianteDeIngenierADeSistemasDisciplinadaResilienteYProactivaConGranInterSEnElMbitoDeLaCiberseguridad from "./estudiante-de-ingenier-a-de-sistemas-disciplinada-resiliente-y-proactiva-con-gran-inter-s-en-el-mbito-de-la-ciberseguridad.svg";
-import "./style.css";
+import estudianteImage from "./estudiante-de-ingenier-a-de-sistemas-disciplinada-resiliente-y-proactiva-con-gran-inter-s-en-el-mbito-de-la-ciberseguridad.svg";
+import "./styleBEM.css";
 
 export const WebPortafolio = () => {
   return (
     <div className="web-portafolio">
       <Header />
-      <div className="frame" data-responsive-mode="desktop">
-        <div className="hero-basic" />
 
-        <img className="element" alt="Element" src={x21} />
-      </div>
+      <section className="hero" data-responsive-mode="desktop">
+        <div className="hero__background" />
+        <img className="hero__image" alt="Hero element" src={x21} />
+      </section>
 
-      <CardGridImage />
-      <CardsWrapper />
-      <CardGridImageWrapper />
-      <Footer />
-      <img
-        className="estudiante-de"
-        alt="Estudiante de"
-        src={
-          estudianteDeIngenierADeSistemasDisciplinadaResilienteYProactivaConGranInterSEnElMbitoDeLaCiberseguridad
-        }
-      />
+      <main>
+        <CardGridImage />
+        <CardsWrapper />
+        <CardGridImageWrapper />
 
-      <TextContentHeading
-        align="start"
-        className="text-content-heading-instance"
-        heading="Contacto"
-        subheading=""
-      />
-      <div className="subheading-wrapper">
-        <div className="subheading-2">{""}</div>
-      </div>
+        <img
+          className="about__image"
+          alt="Descripción de estudiante"
+          src={estudianteImage}
+        />
 
-      <p className="text-wrapper-2">04 de Noviembre de 2022</p>
+        <section className="articles">
+          <h2 className="articles__title">Artículos</h2>
+          <img className="articles__image" alt="Artículo destacado" src={x111} />
+        </section>
 
-      <div className="text-wrapper-3">Artículos</div>
+        <section className="contact">
+          <TextContentHeading
+            align="start"
+            className="contact__heading"
+            heading="Contacto"
+            subheading=""
+          />
 
-      <img className="img" alt="Element" src={x111} />
+          <div className="contact__subheading-wrapper">
+            <div className="contact__subheading">{""}</div>
+          </div>
+          
+          <div className="contact__label">Contactos</div>
+        </section>
+      </main>
 
-      <div className="text-wrapper-4">Contactos</div>
+      <Footer>
+        <p className="footer__date">04 de Noviembre de 2022</p>
+      </Footer>
     </div>
   );
 };

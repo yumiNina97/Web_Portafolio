@@ -1,3 +1,4 @@
+/* Bloque: web-portafolio */
 .web-portafolio {
     align-items: flex-start;
     background-color: var(--color-background-default-default);
@@ -6,10 +7,10 @@
     overflow: hidden;
     position: relative;
     width: var(--responsive-device-width);
-  }
-  
-  /* Bloque: hero */
-  .hero {
+}
+
+/* Bloque: hero */
+.hero {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
@@ -17,53 +18,74 @@
     height: 444px;
     position: relative;
     width: 100%;
-  }
-  
-  .hero__background {
+}
+
+.hero__background {
     background-color: var(--color-background-default-secondary);
     flex: 1;
     height: 447px;
     margin-bottom: -3px;
     position: relative;
-  }
-  
-  .hero__image {
+}
+
+.hero__image {
     height: 375px;
     left: 205px;
     object-fit: cover;
     position: absolute;
     top: 25px;
     width: 214px;
-  }
-  
-  /* Bloque: about */
-  .about__image {
+}
+
+/* Bloque: about */
+.about {
+    position: relative;
+}
+
+.about__image {
     height: 146px;
-    left: 536px;
-    position: absolute;
-    top: 230px;
     width: 513px;
-  }
-  
-  /* Bloque: contact */
-  .contact__heading {
-    left: 64px !important;
-    position: absolute !important;
-    top: 3127px !important;
-  }
-  
-  .contact__subheading-wrapper {
-    align-items: flex-start;
-    display: inline-flex;
+    position: relative;
+}
+
+/* Bloque: articles */
+.articles {
+    position: relative;
+}
+
+.articles__title {
+    color: #51bbb1;
+    font-family: var(--subtitle-font-family);
+    font-size: var(--subtitle-font-size);
+    font-style: var(--subtitle-font-style);
+    font-weight: var(--subtitle-font-weight);
+    letter-spacing: var(--subtitle-letter-spacing);
+    line-height: var(--subtitle-line-height);
+    margin-bottom: 2rem;
+}
+
+.articles__image {
+    height: 170px;
+    object-fit: cover;
+    width: 160px;
+}
+
+/* Bloque: contact */
+.contact {
+    position: relative;
+}
+
+.contact__heading {
+    margin-bottom: 2rem;
+}
+
+.contact__subheading-wrapper {
+    display: flex;
     flex-direction: column;
     gap: var(--size-space-200);
-    left: 125px;
-    position: absolute;
-    top: 1218px;
-  }
-  
-  .contact__subheading {
-    align-self: stretch;
+}
+
+.contact__subheading {
     color: var(--color-text-default-secondary);
     font-family: var(--subheading-font-family);
     font-size: var(--subheading-font-size);
@@ -71,62 +93,68 @@
     font-weight: var(--subheading-font-weight);
     letter-spacing: var(--subheading-letter-spacing);
     line-height: var(--subheading-line-height);
-    margin-top: -1px;
-    position: relative;
-  }
-  
-  .footer__date {
+}
+
+.contact__label {
+    color: #51bbb1;
+    font-family: var(--subtitle-font-family);
+    font-size: var(--subtitle-font-size);
+    font-style: var(--subtitle-font-style);
+    font-weight: var(--subtitle-font-weight);
+    letter-spacing: var(--subtitle-letter-spacing);
+    line-height: var(--subtitle-line-height);
+}
+
+/* Bloque: footer */
+.footer {
+    margin-top: auto;
+}
+
+.footer__date {
     color: #948d8d;
     font-family: var(--body-small-font-family);
     font-size: var(--body-small-font-size);
     font-style: var(--body-small-font-style);
     font-weight: var(--body-small-font-weight);
-    left: 99px;
     letter-spacing: var(--body-small-letter-spacing);
     line-height: var(--body-small-line-height);
-    position: absolute;
-    top: 1383px;
-    width: 240px;
-  }
-  
-  /* Bloque: articles */
-  .articles__title {
-    color: #51bbb1;
-    font-family: var(--subtitle-font-family);
-    font-size: var(--subtitle-font-size);
-    font-style: var(--subtitle-font-style);
-    font-weight: var(--subtitle-font-weight);
-    height: 46px;
-    left: 82px;
-    letter-spacing: var(--subtitle-letter-spacing);
-    line-height: var(--subtitle-line-height);
-    position: absolute;
-    top: 1120px;
-    white-space: nowrap;
-    width: 1080px;
-  }
-  
-  .articles__image {
-    height: 170px;
-    left: 88px;
-    object-fit: cover;
-    position: absolute;
-    top: 2012px;
-    width: 160px;
-  }
-  
-  /* Bloque: contact */
-  .contact__label {
-    color: #51bbb1;
-    font-family: var(--subtitle-font-family);
-    font-size: var(--subtitle-font-size);
-    font-style: var(--subtitle-font-style);
-    font-weight: var(--subtitle-font-weight);
-    left: 59px;
-    letter-spacing: var(--subtitle-letter-spacing);
-    line-height: var(--subtitle-line-height);
-    position: absolute;
-    top: 2292px;
-    width: 189px;
-  }
+}
+
+/* Bloque: navigation */
+.navigation {
+    display: flex;
+    gap: var(--size-space-400);
+    padding: var(--size-space-400);
+}
+
+.navigation__link {
+    color: var(--color-text-default-default);
+    text-decoration: none;
+    font-family: var(--body-base-font-family);
+    font-size: var(--body-base-font-size);
+    transition: color 0.3s ease;
+}
+
+.navigation__link:hover {
+    color: var(--color-text-brand-on-brand-secondary);
+}
+
+/* Bloque: social-links */
+.social-links {
+    display: flex;
+    gap: var(--size-space-300);
+    margin-top: var(--size-space-400);
+}
+
+.social-links__item {
+    color: var(--color-text-default-default);
+    text-decoration: none;
+    font-family: var(--body-small-font-family);
+    font-size: var(--body-small-font-size);
+    transition: color 0.3s ease;
+}
+
+.social-links__item:hover {
+    color: var(--color-text-brand-on-brand-secondary);
+}
   
