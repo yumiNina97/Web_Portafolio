@@ -1,3 +1,88 @@
+.main-header {
+    display: flex;
+    width: 100%;
+    max-width: 1156px;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cat-logo {
+    width: 100.611px;
+    height: 60.877px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link:hover, .nav-link:focus {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.github-icon, .linkedin-icon {
+    width: 66px;
+    height: 66px;
+    cursor: pointer;
+}
+
+.nav__title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav__button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav__icon {
+    width: 24px;
+    height: 24px;
+}
 .main-nav {
     display: flex;
     align-items: center;

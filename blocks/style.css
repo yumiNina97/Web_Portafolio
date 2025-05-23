@@ -3,9 +3,7 @@
 @import url('./projects/projects.css');
 @import url('./blog/blog.css');
 @import url('./about-me/about-me.css');
-@import url('./profile/profile.css');
-@import url('./footer/footer.css');
-@import url('./content/content.css');
+@import url('./contact/contact.css');
 
 :root {
   --primary-color: #37807F;
