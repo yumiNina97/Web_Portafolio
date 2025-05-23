@@ -1,0 +1,18 @@
+/* Agregar al final del archivo existente */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-linkedin {
+    width: 40px;
+    height: 40px;
+}
