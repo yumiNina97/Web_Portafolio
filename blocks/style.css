@@ -1,0 +1,15 @@
+@import url('./nav/nav.css');
+@import url('./hero/hero.css');
+@import url('./projects/projects.css');
+@import url('./blog/blog.css');
+@import url('./about-me/about-me.css');
+@import url('./profile/profile.css');
+@import url('./footer/footer.css');
+@import url('./content/content.css');
+
+:root {
+  --primary-color: #37807F;
+  --secondary-color: #9BD2D4;
+  --text-color: #333333;
+  --background-color: #FFFFFF;
+}

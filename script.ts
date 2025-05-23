@@ -9,18 +9,16 @@ interface ContactForm extends HTMLFormElement {
   readonly elements: FormElements;
 }
 
-// Wait for DOM to be fully loaded
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scrolling for navigation links
+  
   setupSmoothScrolling();
 
-  // Form validation
+ 
   setupFormValidation();
 });
 
-/**
- * Sets up smooth scrolling for navigation links
- */
+
 function setupSmoothScrolling(): void {
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -42,9 +40,7 @@ function setupSmoothScrolling(): void {
   });
 }
 
-/**
- * Sets up form validation for the contact form
- */
+
 function setupFormValidation(): void {
   const contactForm = document.getElementById('contactForm') as ContactForm;
 
@@ -56,7 +52,7 @@ function setupFormValidation(): void {
       const emailInput = contactForm.elements.email;
       const messageInput = contactForm.elements.message;
 
-      // Basic validation
+      
       if (!validateName(nameInput.value)) {
         showError(nameInput, 'Por favor ingrese un nombre válido');
         return;
@@ -72,8 +68,7 @@ function setupFormValidation(): void {
         return;
       }
 
-      // If validation passes, you would typically send the form data to a server
-      // For this example, we'll just show a success message
+      
       showSuccess(contactForm);
     });
   }
@@ -81,8 +76,8 @@ function setupFormValidation(): void {
 
 /**
  * Validates a name input
- * @param name - The name to validate
- * @returns True if the name is valid, false otherwise
+ * @param name 
+ * @returns 
  */
 function validateName(name: string): boolean {
   return name.trim().length > 0;
@@ -90,8 +85,8 @@ function validateName(name: string): boolean {
 
 /**
  * Validates an email address
- * @param email - The email to validate
- * @returns True if the email is valid, false otherwise
+ * @param email 
+ * @returns
  */
 function validateEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -100,8 +95,8 @@ function validateEmail(email: string): boolean {
 
 /**
  * Validates a message input
- * @param message - The message to validate
- * @returns True if the message is valid, false otherwise
+ * @param message 
+ * @returns 
  */
 function validateMessage(message: string): boolean {
   return message.trim().length > 10;
@@ -109,20 +104,19 @@ function validateMessage(message: string): boolean {
 
 /**
  * Shows an error message for an input element
- * @param inputElement - The input element with an error
- * @param message - The error message to display
+ * @param inputElement 
+ * @param message 
  */
 function showError(inputElement: HTMLInputElement | HTMLTextAreaElement, message: string): void {
-  // Remove any existing error messages
+ 
   const existingError = inputElement.parentElement?.querySelector('.error-message');
   if (existingError) {
     existingError.remove();
   }
 
-  // Add error class to input
+ 
   inputElement.classList.add('error');
 
-  // Create and append error message
   const errorElement = document.createElement('p');
   errorElement.className = 'error-message';
   errorElement.textContent = message;
@@ -132,16 +126,16 @@ function showError(inputElement: HTMLInputElement | HTMLTextAreaElement, message
 
   inputElement.parentElement?.appendChild(errorElement);
 
-  // Focus the input element
+ 
   inputElement.focus();
 }
 
 /**
  * Shows a success message and resets the form
- * @param form - The form that was successfully submitted
+ * @param form 
  */
 function showSuccess(form: HTMLFormElement): void {
-  // Create success message
+  
   const successMessage = document.createElement('div');
   successMessage.className = 'success-message';
   successMessage.textContent = '¡Mensaje enviado con éxito!';
@@ -151,13 +145,13 @@ function showSuccess(form: HTMLFormElement): void {
   successMessage.style.marginTop = '10px';
   successMessage.style.textAlign = 'center';
 
-  // Add success message to form
+  
   form.appendChild(successMessage);
 
-  // Reset form
+  
   form.reset();
 
-  // Remove success message after 3 seconds
+ 
   setTimeout(() => {
     successMessage.remove();
   }, 3000);
@@ -174,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 count++;
                 countElement.textContent = count.toString();
                 
-                // Añadir clase activa al botón
+                
                 button.classList.toggle('active');
             }
         });
