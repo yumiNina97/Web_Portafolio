@@ -1,14 +1,16 @@
-@import url('./base.css');
-@import url('./nav/nav.css');
-@import url('./hero/hero.css');
-@import url('./projects/projects.css');
-@import url('./blog/blog.css');
-@import url('./about-me/about-me.css');
-@import url('./contact/contact.css');
+@import 'base.css';
+@import 'nav/nav.css';
+@import 'hero/hero.css';
+@import 'about-me/about-me.css';
+@import 'projects/projects.css';
+@import 'blog/blog.css';
+@import 'contact/contact.css';
+@import 'skills/skills.css';
+@import 'footer/footer.css';
 
 :root {
-    --primary-color: #37807F;
-    --secondary-color: #9BD2D4;
-    --text-color: #333333;
-    --background-color: #FFFFFF;
+  --primary-color: #37807F;
+  --secondary-color: #9BD2D4;
+  --text-color: #333333;
+  --background-color: #FFFFFF;
 }
