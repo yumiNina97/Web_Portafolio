@@ -809,3 +809,31 @@ body {
     font-size: 14px;
   }
 }
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.action-button:hover {
+    transform: scale(1.1);
+}
+
+.action-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.action-button:hover svg path {
+    fill: #9BD2D4;
+}
