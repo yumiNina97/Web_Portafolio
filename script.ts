@@ -162,3 +162,21 @@ function showSuccess(form: HTMLFormElement): void {
     successMessage.remove();
   }, 3000);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const likeButtons = document.querySelectorAll('.like-button');
+    
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const countElement = button.parentElement?.querySelector('.like-count');
+            if (countElement) {
+                let count = parseInt(countElement.textContent || '0');
+                count++;
+                countElement.textContent = count.toString();
+                
+                // Añadir clase activa al botón
+                button.classList.toggle('active');
+            }
+        });
+    });
+});

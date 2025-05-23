@@ -837,3 +837,15 @@ body {
 .action-button:hover svg path {
     fill: #9BD2D4;
 }
+
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.like-count {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+}
