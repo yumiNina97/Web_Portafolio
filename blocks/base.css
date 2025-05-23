@@ -1,4 +1,4 @@
-/* Base styles and variables */
+
 :root {
     --primary-color: #37807F;
     --secondary-color: #9BD2D4;
@@ -15,7 +15,7 @@
     --border-radius-xl: 125px;
 }
 
-/* Global styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -54,12 +54,12 @@ body {
 }
 
 
-/* Agregar al inicio del archivo */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Agregar a las secciones para mejorar el scroll */
+
 section {
-    scroll-margin-top: 2rem; /* Ajusta según la altura de tu header */
+    scroll-margin-top: 2rem; 
 }

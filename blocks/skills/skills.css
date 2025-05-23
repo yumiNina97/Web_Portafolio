@@ -1,4 +1,4 @@
-/* Skills and Education section */
+
 .skills-education-section {
     display: flex;
     width: 100%;
@@ -101,7 +101,7 @@
     object-fit: contain;
 }
 
-/* Responsive styles */
+
 @media (max-width: 991px) {
     .skills-education-section {
         flex-direction: column;
