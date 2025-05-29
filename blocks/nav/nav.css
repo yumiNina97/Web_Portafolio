@@ -113,10 +113,7 @@
         flex-wrap: wrap;
         justify-content: space-between; /* Logo on left, social/toggle on right */
     }
-    .logo {
-        /* Potentially reduce logo size on mobile */
-    }
-    .social-media {
+        .social-media {
         order: 2; /* Social icons before nav if it wraps */
     }
     .menu-toggle {
@@ -136,7 +133,5 @@
         /* text-align: center; */
         gap: 0.5rem;
     }
-    .nav-list.active { /* Class toggled by JS */
-        /* display: flex; */
-    }
+    
 }
