@@ -1,0 +1,30 @@
+
+@import url("./base.css");
+@import url("./nav/nav.css");
+@import url("./hero/hero.css");
+@import url("./about-me/about-me.css");
+@import url("./projects/projects.css");
+@import url("./skills/skills.css");
+@import url("./blog/blog.css");
+@import url("./contact/contact.css");
+@import url("./footer/footer.css");
+
+:root {
+    --primary-color: #37807F;
+    --secondary-color: #2E6E80; /* Usando el valor de la primera declaración que parece más consistente */
+    --accent-color: #A6C3C0;    /* Usando el valor de la primera declaración */
+    --background-color: #FFFDF6; /* Unificado desde la segunda declaración, parece más específico para el tema */
+    --text-color: #1A1B22;     /* Unificado desde la segunda declaración */
+    --white: #ffffff;          /* #FFF es lo mismo, pero #ffffff es más explícito */
+    --footer-background: #2E6E80;
+    --light-text: #6C757D;
+    --form-background: #FAF6E9;
+    --card-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    --border-radius-sm: 10px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 125px;
+}
+
+
+

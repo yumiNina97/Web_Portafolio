@@ -1,0 +1,52 @@
+/* Estilos para la sección #about (o .about-section si usas esa clase en HTML) */
+#about {
+    padding: 4rem 1rem; /* Relleno, ajusta según necesites */
+    text-align: center; /* Centra el contenido de la sección */
+}
+
+/* El estilo .section-title ya está definido en base.css */
+/* Si necesitas un estilo específico para el título de esta sección, puedes añadirlo aquí */
+/* Por ejemplo: */
+/*
+#about .section-title {
+    color: var(--secondary-color); 
+}
+*/
+
+.about-section__content {
+    display: flex;
+    flex-direction: column; /* Por defecto, o row si quieres imagen al lado de texto */
+    align-items: center;
+    gap: 2rem; /* Espacio entre elementos (ej. imagen y texto) */
+    max-width: 900px; /* Ancho máximo para el contenido de "Sobre Mí" */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.about-section__image {
+    width: 250px; /* Ajusta el tamaño de tu imagen */
+    height: 250px;
+    border-radius: 15px; /* O 50% para circular */
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-section__text {
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    text-align: justify; /* O left, o center según prefieras */
+}
+
+.about-section__text p {
+    margin-bottom: 1rem; /* Espacio entre párrafos */
+}
+
+.about-section__text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Si tienes un botón de "Descargar CV" o similar */
+.about-section__cv-button {
+    margin-top: 1.5rem;
+    /* Estilos adicionales si el .btn general no es suficiente */
+}
