@@ -65,13 +65,13 @@
 }
 
 /* .social-media a styles are mostly fine, ensure SVG sizes are good */
-.social-media a svg {
-    width: 28px; /* Adjust (original was 28px via font-size) */
-    height: 28px;
-    fill: var(--primary-color);
+.social-media a svg.github-icon { /* Be more specific if needed */
+    width: 32px; /* Or your desired size for the header */
+    height: 32px; /* Or your desired size for the header */
+    fill: var(--primary-color); /* Ensure fill color is consistent */
 }
 
-.social-media a:hover svg {
+.social-media a:hover svg.github-icon {
     fill: var(--accent-color);
     transform: scale(1.1);
 }
