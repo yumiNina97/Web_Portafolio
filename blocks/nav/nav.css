@@ -65,16 +65,32 @@
 }
 
 /* .social-media a styles are mostly fine, ensure SVG sizes are good */
-.social-media a svg.github-icon { /* Be more specific if needed */
-    width: 40px; /* Or your desired size for the header */
-    height: 40px; /* Or your desired size for the header */
-    fill: var(--primary-color); /* Ensure fill color is consistent */
+.social-media a svg { /* Regla general para todos los SVGs en social-media */
+    width: 32px; /* Tamaño deseado para los iconos del header */
+    height: 32px; /* Tamaño deseado para los iconos del header */
+    fill: var(--primary-color, #5B8996); /* Color de relleno por defecto, ajusta si es necesario */
+    transition: transform 0.3s ease, fill 0.3s ease; /* Transición suave para hover */
 }
 
+/* Elimina o comenta la regla específica para github-icon si ya no es necesaria
+.social-media a svg.github-icon { 
+    width: 40px; 
+    height: 40px; 
+    fill: var(--primary-color); 
+}
+*/
+
+.social-media a:hover svg { /* Animación hover para todos los SVGs */
+    fill: var(--accent-color, #37807F); /* Cambia el color al hacer hover, define --accent-color o usa un color directo */
+    transform: scale(1.1);
+}
+
+/* Comenta o elimina la regla específica de hover para github-icon si la regla general anterior la cubre
 .social-media a:hover svg.github-icon {
     fill: var(--accent-color);
     transform: scale(1.1);
 }
+*/
 
 /* Media query for responsive nav */
 @media (max-width: 991px) { /* Adjust breakpoint as needed */
