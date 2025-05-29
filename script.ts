@@ -157,3 +157,55 @@ function createMobileMenuToggle(): void {
 
 // Initialize on load
 adjustForScreenSize();
+
+
+// Función para la búsqueda de proyectos
+function setupProjectSearch(): void {
+    const searchInput = document.getElementById('projectSearchInput') as HTMLInputElement | null;
+    const searchButton = document.getElementById('projectSearchButton') as HTMLButtonElement | null;
+    const projectsContainer = document.querySelector('.projects-container');
+
+    if (!searchInput || !searchButton || !projectsContainer) {
+        console.warn('Elementos de búsqueda de proyectos no encontrados. La funcionalidad de búsqueda no estará activa.');
+        return;
+    }
+
+    const projectCards = Array.from(projectsContainer.getElementsByClassName('project-card')) as HTMLElement[];
+
+    const performSearch = () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        projectCards.forEach(card => {
+            const titleElement = card.querySelector('.project-title') as HTMLElement | null;
+            const descriptionElement = card.querySelector('.project-description') as HTMLElement | null;
+
+            const title = titleElement ? titleElement.textContent?.toLowerCase() || '' : '';
+            const description = descriptionElement ? descriptionElement.textContent?.toLowerCase() || '' : '';
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    };
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            performSearch();
+        }
+    });
+}
+
+// Asegúrate de llamar a esta función cuando el DOM esté cargado,
+// similar a como manejas otros scripts.
+// Por ejemplo, si tienes un evento DOMContentLoaded:
+document.addEventListener('DOMContentLoaded', () => {
+    // ... tus otras inicializaciones ...
+    setupProjectSearch(); 
+    // ... cualquier otra función que se ejecute al cargar el DOM ...
+});
+
+// Si ya tienes una función que se ejecuta en DOMContentLoaded,
+// simplemente añade la llamada a setupProjectSearch() dentro de ella.
