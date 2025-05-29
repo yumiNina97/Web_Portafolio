@@ -495,8 +495,8 @@ section {
 }
 
 .linkedin-contact-icon, .github-contact-icon, .gmail-icon {
-    width: 66px;
-    height: 66px;
+    width: 90px;
+    height: 90px;
 }
 
 /* Skills section */
@@ -605,7 +605,7 @@ section {
 
 .footer-columns {
     gap: 20px;
-    display: flex;
+    display: flex; 
 }
 
 .footer-column {

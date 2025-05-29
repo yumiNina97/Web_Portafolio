@@ -66,8 +66,8 @@
 
 /* .social-media a styles are mostly fine, ensure SVG sizes are good */
 .social-media a svg.github-icon { /* Be more specific if needed */
-    width: 32px; /* Or your desired size for the header */
-    height: 32px; /* Or your desired size for the header */
+    width: 40px; /* Or your desired size for the header */
+    height: 40px; /* Or your desired size for the header */
     fill: var(--primary-color); /* Ensure fill color is consistent */
 }
 
