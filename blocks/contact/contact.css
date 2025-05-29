@@ -125,11 +125,23 @@
     gap: 20px;
 }
 
+/* Ajuste para los contenedores de los iconos */
 .contact-linkedin,
 .contact-github,
 .contact-gmail {
-    width: 66px;
-    height: 66px;
+    width: 198px; /* Tamaño del contenedor */
+    height: 198px; /* Tamaño del contenedor */
+    display: flex; /* Para centrar el SVG si es más pequeño */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste para los SVGs dentro de los contenedores */
+.contact-linkedin svg,
+.contact-github svg,
+.contact-gmail svg {
+    width: 100%; /* El SVG ocupa el 100% del contenedor */
+    height: 100%; /* El SVG ocupa el 100% del contenedor */
 }
 
 .contact-text {

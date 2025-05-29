@@ -23,7 +23,7 @@
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Mantenemos el padding existente */
 }
 
 .project-title {
@@ -34,6 +34,8 @@
 .project-description {
     color: var(--text-color);
     margin-bottom: 1.5rem;
+    text-align: justify;
+    padding: 0 0.5rem; /* Añade un poco de padding horizontal */
 }
 
 .project-actions {

@@ -23,7 +23,9 @@
 }
 
 .blog-content {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Mantenemos el padding existente */
+    /* Si quieres más padding específicamente para el texto, puedes añadirlo aquí
+       o a un contenedor interno si solo quieres afectar al texto y no a otros elementos en .blog-content */
 }
 
 .blog-title {
@@ -34,6 +36,8 @@
 .blog-description {
     color: var(--text-color);
     margin-bottom: 1rem;
+    text-align: justify;
+    padding: 0 0.5rem; /* Añade un poco de padding horizontal para que no toque los bordes */
 }
 
 .blog-date {
