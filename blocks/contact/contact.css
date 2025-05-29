@@ -128,8 +128,8 @@
 .contact-linkedin,
 .contact-github,
 .contact-gmail {
-    width: 80px; /* Increased from 66px */
-    height: 80px; /* Increased from 66px */
+    width: 66px;
+    height: 66px;
 }
 
 .contact-text {
