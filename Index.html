@@ -77,26 +77,23 @@
             </p>
         </section>
 
-        <section class="project-search-section">
-            <h2 class="section-title">Buscar Proyectos</h2>
-            <div class="search-container">
-                <input type="text" id="projectSearchInput" class="search-input" placeholder="Escribe para buscar proyectos...">
-                <button id="projectSearchButton" class="search-button">Buscar</button>
+        <section id="projects" class="projects-section"> 
+            <h2 class="projects-section__title section-title">Proyectos</h2>
+            
+            <div class="projects-section__search-container">
+                <input type="text" id="projectSearchInput" class="projects-section__search-input" placeholder="Buscar en proyectos...">
+                <button id="projectSearchButton" class="projects-section__search-button">Buscar</button>
             </div>
-        </section>
 
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Proyectos</h2>
-            <div class="projects-container">
+            <div class="projects-section__projects-container projects-container">
                 <article class="project-card">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b56704f6edc0876bc824b58af2f69558f59e669?placeholderIfAbsent=true" alt="Project" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Cemento Camba S.A Pasante de TI</h3>
-                        <p class="project-description">Durante la pasantía, realicé el mantenimiento de equipos a nivel de software y hardware, brindé soporte técnico, preparé nuevos equipos para los funcionarios y actualicé el inventario. También organicé el mapeo y listado de las carpetas compartidas en la red de la empresa.</p>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9b56704f6edc0876bc824b58af2f69558f59e669?placeholderIfAbsent=true" alt="Project" class="project-card__img project-img">
+                    <div class="project-card__info project-info">
+                        <h3 class="project-card__title project-title">Cemento Camba S.A Pasante de TI</h3>
+                        <p class="project-card__description project-description">Durante la pasantía, realicé el mantenimiento de equipos a nivel de software y hardware, brindé soporte técnico, preparé nuevos equipos para los funcionarios y actualicé el inventario. También organicé el mapeo y listado de las carpetas compartidas en la red de la empresa.</p>
                     </div>
-                    <div class="project-actions">
+                    <div class="project-card__actions project-actions">
                         <span class="like-count">12</span>
-                        <button class="like-button" aria-label="Like project">
                             <svg class="heart-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="48" height="48" fill="#FCFCFC"></rect>
                                 <path d="M41.68 9.21999C40.6585 8.198 39.4456 7.38728 38.1107 6.83416C36.7758 6.28103 35.345 5.99634 33.9 5.99634C32.455 5.99634 31.0242 6.28103 29.6893 6.83416C28.3544 7.38728 27.1415 8.198 26.12 9.21999L24 11.34L21.88 9.21999C19.8166 7.15661 17.0181 5.99741 14.1 5.99741C11.1819 5.99741 8.38338 7.15661 6.31999 9.21999C4.25661 11.2834 3.09741 14.0819 3.09741 17C3.09741 19.9181 4.25661 22.7166 6.31999 24.78L24 42.46L41.68 24.78C42.702 23.7585 43.5127 22.5456 44.0658 21.2107C44.6189 19.8758 44.9036 18.445 44.9036 17C44.9036 15.555 44.6189 14.1242 44.0658 12.7893C43.5127 11.4544 42.702 10.2415 41.68 9.21999Z" stroke="#71BCC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -143,7 +140,7 @@
                     <div class="project-actions">
                         <span class="like-count">12</span>
                         <button class="like-button" aria-label="Like project">
-                            <svg class="heart-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="heart-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="48" height="48" fill="#FCFCFC"></rect>
                                 <path d="M41.68 9.21999C40.6585 8.198 39.4456 7.38728 38.1107 6.83416C36.7758 6.28103 35.345 5.99634 33.9 5.99634C32.455 5.99634 31.0242 6.28103 29.6893 6.83416C28.3544 7.38728 27.1415 8.198 26.12 9.21999L24 11.34L21.88 9.21999C19.8166 7.15661 17.0181 5.99741 14.1 5.99741C11.1819 5.99741 8.38338 7.15661 6.31999 9.21999C4.25661 11.2834 3.09741 14.0819 3.09741 17C3.09741 19.9181 4.25661 22.7166 6.31999 24.78L24 42.46L41.68 24.78C42.702 23.7585 43.5127 22.5456 44.0658 21.2107C44.6189 19.8758 44.9036 18.445 44.9036 17C44.9036 15.555 44.6189 14.1242 44.0658 12.7893C43.5127 11.4544 42.702 10.2415 41.68 9.21999Z" stroke="#71BCC5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
@@ -268,7 +265,7 @@
                     <div class="skill-category">
                         <h4 class="skill-category-title">Backend</h4>
                         <div class="skill-icons">
-                            <!-- Assuming JS here means Node.js -->
+                           
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f1ba4965218a31bc3beae8d85cbe17c49e22f627?placeholderIfAbsent=true" alt="Node.js" class="skill-icon img-responsive">
                             <!-- Angular is primarily frontend, if there's a backend aspect you're referring to, clarify -->
                             <!-- TypeScript can be backend (e.g. with Node.js) -->
