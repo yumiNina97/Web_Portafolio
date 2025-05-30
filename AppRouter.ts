@@ -15,6 +15,7 @@ const viewRenderers: Record<string, ViewRenderer> = {
         el.innerHTML = "<h2>About Section</h2><p>Content for the about page.</p>";
         return el;
     },
+    
     "/projects": () => {
         const el = document.createElement("div");
         el.innerHTML = "<h2>Projects Section</h2><p>Content for the projects page.</p>";

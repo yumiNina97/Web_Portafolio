@@ -15,31 +15,31 @@ body {
     line-height: 1.5;
 }
 
-.portfolio-container { /* Equivalente a .portfolio del original */
+.portfolio-container { 
     display: flex;
     width: 100%;
     min-height: 100vh;
-    padding-top: 40px; /* Mantener si es necesario para el layout general */
+    padding-top: 40px; 
     flex-direction: column;
-    /* justify-content: space-between; */ /* Comentado, puede ser mejor manejarlo por secciones */
+    
     align-items: center;
-    /* gap: 32px; */ /* El gap general puede ser mejor manejarlo por secciones */
-    max-width: 1440px; /* Opcional, si quieres un ancho máximo global */
-    margin: 0 auto; /* Para centrar portfolio-container si tiene max-width */
+    
+    max-width: 1440px; 
+    margin: 0 auto; 
 }
 
-section { /* Estilos base para todas las secciones */
+section { 
     scroll-margin-top: 2rem; 
     width: 100%;
-    max-width: 1152px; /* Ancho máximo para el contenido de la sección, como en el original */
-    padding: 2rem 20px; /* Relleno vertical y horizontal general para secciones */
-    margin: 0 auto 40px auto; /* Centrar la sección y añadir margen inferior (originalmente 60px o 40px) */
+    max-width: 1152px; 
+    padding: 2rem 20px; 
+    margin: 0 auto 40px auto; 
 }
 
-.container { /* Contenedor general, similar al original */
-    display: flex; /* Para alinear items si es necesario */
+.container { 
+    display: flex;
     width: 100%;
-    max-width: 1200px; /* Como en el original */
+    max-width: 1200px; 
     padding: 0 20px; /* Ajustado desde los 40px originales para consistencia con media queries */
     /* justify-content: space-between; */ /* Esto es más para el header, no tan general */
     /* align-items: center; */ /* Esto es más para el header */
