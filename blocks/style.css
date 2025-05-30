@@ -11,11 +11,11 @@
 
 :root {
     --primary-color: #37807F;
-    --secondary-color: #2E6E80; /* Usando el valor de la primera declaración que parece más consistente */
-    --accent-color: #A6C3C0;    /* Usando el valor de la primera declaración */
-    --background-color: #FFFDF6; /* Unificado desde la segunda declaración, parece más específico para el tema */
-    --text-color: #1A1B22;     /* Unificado desde la segunda declaración */
-    --white: #ffffff;          /* #FFF es lo mismo, pero #ffffff es más explícito */
+    --secondary-color: #2E6E80; 
+    --accent-color: #A6C3C0;    
+    --background-color: #FFFDF6; 
+    --text-color: #1A1B22;     
+    --white: #ffffff;          
     --footer-background: #2E6E80;
     --light-text: #6C757D;
     --form-background: #FAF6E9;
@@ -27,7 +27,7 @@
 }
 
 
-/* Estilos para la sección de búsqueda de proyectos */
+
 .project-search-section {
     padding: 2rem 1rem;
     text-align: center;
@@ -39,7 +39,7 @@
     align-items: center;
     gap: 10px;
     margin-top: 1rem;
-    max-width: 600px; /* Ajusta según sea necesario */
+    max-width: 600px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,13 +49,13 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    flex-grow: 1; /* Permite que el input crezca */
+    flex-grow: 1; 
 }
 
 .search-button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    background-color: #71BCC5; /* Color primario de tu tema */
+    background-color: #71BCC5; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -64,10 +64,10 @@
 }
 
 .search-button:hover {
-    background-color: #5a9fa8; /* Un tono más oscuro para el hover */
+    background-color: #5a9fa8; 
 }
 
-/* Clase para ocultar proyectos que no coinciden */
+
 .project-card.hidden {
     display: none;
 }

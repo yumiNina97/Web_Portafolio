@@ -9,9 +9,10 @@ class SearchCommand implements Command {
         this.query = query;
         this.itemListManager = ItemListManager.getInstance();
     }
-
+   
     execute(): void {
         const allItems = this.itemListManager.getItems();
+        
         const results = allItems.filter(item => 
             (item.name as string).toLowerCase().includes(this.query.toLowerCase())
             

@@ -1,18 +1,17 @@
 // TypeScript for Yuvinca Nina Portfolio
 
-// Define types for DOM elements
+
 interface HTMLElementWithValue extends HTMLElement {
   value: string;
 }
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
   setupContactForm();
   setupProjectInteractions();
 });
 
-// Setup smooth scrolling for navigation links
+
 function setupNavigation(): void {
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -34,7 +33,6 @@ function setupNavigation(): void {
   });
 }
 
-// Setup contact form validation and submission
 function setupContactForm(): void {
   const contactForm = document.querySelector('.contact-form') as HTMLFormElement;
 
@@ -46,7 +44,7 @@ function setupContactForm(): void {
       const emailInput = document.getElementById('email') as HTMLElementWithValue;
       const messageInput = document.getElementById('message') as HTMLElementWithValue;
 
-      // Simple validation
+     
       if (!nameInput.value.trim()) {
         alert('Por favor, ingresa tu nombre');
         return;
@@ -67,26 +65,24 @@ function setupContactForm(): void {
         return;
       }
 
-      // Here you would typically send the form data to a server
-      // For this example, we'll just show a success message
+      
       alert('¡Mensaje enviado con éxito! Te contactaré pronto.');
       contactForm.reset();
     });
   }
 }
 
-// Email validation helper function
 function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// Setup project card interactions (like and bookmark buttons)
+
 function setupProjectInteractions(): void {
   const likeButtons = document.querySelectorAll('.like-button');
   const bookmarkButtons = document.querySelectorAll('.bookmark-button');
 
-  // Like button functionality
+  
   likeButtons.forEach(button => {
     button.addEventListener('click', () => {
       const projectCard = button.closest('.project-card');
@@ -97,7 +93,7 @@ function setupProjectInteractions(): void {
           likeCount.textContent = (currentCount + 1).toString();
         }
 
-        // Add visual feedback
+     
         button.classList.add('liked');
         setTimeout(() => {
           button.classList.remove('liked');
@@ -106,12 +102,12 @@ function setupProjectInteractions(): void {
     });
   });
 
-  // Bookmark button functionality
+
   bookmarkButtons.forEach(button => {
     button.addEventListener('click', () => {
       button.classList.toggle('bookmarked');
 
-      // Add visual feedback
+      
       const projectCard = button.closest('.project-card');
       if (projectCard) {
         projectCard.classList.toggle('bookmarked-project');
@@ -120,7 +116,7 @@ function setupProjectInteractions(): void {
   });
 }
 
-// Add responsive menu toggle for mobile
+
 window.addEventListener('resize', adjustForScreenSize);
 
 function adjustForScreenSize(): void {
@@ -155,11 +151,11 @@ function createMobileMenuToggle(): void {
   }
 }
 
-// Initialize on load
+
 adjustForScreenSize();
 
 
-// Función para la búsqueda de proyectos
+
 function setupProjectSearch(): void {
     const searchInput = document.getElementById('projectSearchInput') as HTMLInputElement | null;
     const searchButton = document.getElementById('projectSearchButton') as HTMLButtonElement | null;
