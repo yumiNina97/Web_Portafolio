@@ -1,99 +1,76 @@
-.header { /* Changed from .main-header */
+.header {
     display: flex;
     width: 100%;
-    padding: 15px 0; /* Slightly more padding */
-    background-color: var(--white, #FFF); /* Optional: if header has a background */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for separation */
-    position: sticky; /* Makes the header stick to the top on scroll */
+    padding: 15px 0;
+    background-color: var(--white, #FFF);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Ensures header is above other content */
+    z-index: 1000;
 }
-
-/* .container styles should be in base.css, ensure it's used correctly in header HTML */
 
 .logo {
     display: flex;
     align-items: center;
-    /* Removed gap, font-size, etc. as the SVG is the logo */
 }
 
 .cat-icon {
-    width: 90px; /* Adjusted size, modify as per original */
-    height: auto; /* Maintain aspect ratio */
+    width: 90px;
+    height: auto;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Pushes nav to the right if logo is on left */
-    margin-right: 2rem; /* Space before social icons if they are separate */
+    margin-left: auto;
+    margin-right: 2rem;
 }
 
-.nav-list { /* Changed from .main-nav__items */
+.nav-list {
     display: flex;
     align-items: center;
-    gap: 2rem; /* Space between nav items, adjust (original was 32px) */
+    gap: 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-link { /* Changed from .main-nav__item-link */
+.nav-link {
     color: var(--text-color, #333);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem; /* Adjust (original was 18px) */
-    padding: 8px 12px; /* Padding for better click area */
+    font-size: 1rem;
+    padding: 8px 12px;
     border-radius: var(--border-radius-sm, 4px);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus,
-.nav-link.active { /* Style for active link */
+.nav-link.active {
     color: var(--primary-color, #007bff);
-    background-color: var(--background-color-light, #f8f9fa); /* Subtle background on hover/active */
+    background-color: var(--background-color-light, #f8f9fa);
 }
-
-/* Remove ::after pseudo-element underline if not desired or if original was different */
-/* .main-nav__item-link::after { ... } */
 
 .social-media {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Adjust (original was 20px) */
+    gap: 1rem;
 }
 
-/* .social-media a styles are mostly fine, ensure SVG sizes are good */
-.social-media a svg { /* Regla general para todos los SVGs en social-media */
-    width: 32px; /* Tamaño deseado para los iconos del header */
-    height: 32px; /* Tamaño deseado para los iconos del header */
-    fill: var(--primary-color, #5B8996); /* Color de relleno por defecto, ajusta si es necesario */
-    transition: transform 0.3s ease, fill 0.3s ease; /* Transición suave para hover */
+.social-media a svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--primary-color, #5B8996);
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
-/* Elimina o comenta la regla específica para github-icon si ya no es necesaria
-.social-media a svg.github-icon { 
-    width: 40px; 
-    height: 40px; 
-    fill: var(--primary-color); 
-}
-*/
-
-.social-media a:hover svg { /* Animación hover para todos los SVGs */
-    fill: var(--accent-color, #37807F); /* Cambia el color al hacer hover, define --accent-color o usa un color directo */
+.social-media a:hover svg {
+    fill: var(--accent-color, #37807F);
     transform: scale(1.1);
 }
 
-/* Comenta o elimina la regla específica de hover para github-icon si la regla general anterior la cubre
-.social-media a:hover svg.github-icon {
-    fill: var(--accent-color);
-    transform: scale(1.1);
-}
-*/
-
-/* Media query for responsive nav */
-@media (max-width: 991px) { /* Adjust breakpoint as needed */
+@media (max-width: 991px) {
     .main-nav {
         margin-right: 1rem;
     }
@@ -115,38 +92,29 @@
 
 @media (max-width: 768px) { 
     .main-nav {
-        /* Example: Hide full nav, show hamburger menu */
-        /* display: none; */ 
-        /* For now, let's just make it wrap or reduce further */
-        order: 3; /* Puts nav after social icons if header flex-direction changes */
+        order: 3;
         margin-left: 0;
         margin-right: 0;
-        width: 100%; /* Full width for mobile nav */
-        justify-content: center; /* Center nav items */
-        padding-top: 10px; /* Space if it wraps below logo/social */
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
     }
-    .header .container { /* Allow header items to wrap on mobile */
+    .header .container {
         flex-wrap: wrap;
-        justify-content: space-between; /* Logo on left, social/toggle on right */
+        justify-content: space-between;
     }
-        .social-media {
-        order: 2; /* Social icons before nav if it wraps */
+    .social-media {
+        order: 2;
     }
     .menu-toggle {
-        display: block; /* Show hamburger icon */
-        order: 1; /* Hamburger icon can be on the far right */
-        /* Add styles for your hamburger button */
+        display: block;
+        order: 1;
         background: none;
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
     }
     .nav-list {
-        /* Example: if hamburger is clicked, this list becomes visible */
-        /* display: none; */ /* Initially hidden */
-        /* flex-direction: column; */
-        /* width: 100%; */
-        /* text-align: center; */
         gap: 0.5rem;
     }
     

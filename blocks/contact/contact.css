@@ -1,4 +1,3 @@
-/* Contact section */
 .contact-section {
     display: flex;
     flex-direction: column;
@@ -6,7 +5,7 @@
     gap: 38px;
     width: 100%;
     max-width: 1152px;
-    padding: 4rem 2rem; /* Added padding similar to other sections */
+    padding: 4rem 2rem;
 }
 
 .contact-container {
@@ -27,9 +26,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: 16px;
-    border-radius: var(--border-radius-lg, 8px); /* Added default for border-radius */
-    box-shadow: var(--card-shadow, 0 2px 4px rgba(0, 0, 0, 0.1)); /* Added default for box-shadow */
-    background-color: var(--white, #ffffff); /* Added default for background-color */
+    border-radius: var(--border-radius-lg, 8px);
+    box-shadow: var(--card-shadow, 0 2px 4px rgba(0, 0, 0, 0.1));
+    background-color: var(--white, #ffffff);
 }
 
 .form-title {
@@ -79,8 +78,8 @@
     line-height: 20px;
     padding: 10px;
     border: none;
-    border-radius: var(--border-radius-lg, 8px); /* Added default for border-radius */
-    background-color: var(--form-background, #f0f0f0); /* Added default for form-background */
+    border-radius: var(--border-radius-lg, 8px);
+    background-color: var(--form-background, #f0f0f0);
 }
 
 .form-input::placeholder,
@@ -94,21 +93,21 @@
 }
 
 .submit-button {
-    color: var(--white, #ffffff); /* Added default for white */
+    color: var(--white, #ffffff);
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
     padding: 8px 32px;
     border: none;
     align-self: stretch;
-    border-radius: var(--border-radius-sm, 4px); /* Added default for border-radius */
+    border-radius: var(--border-radius-sm, 4px);
     cursor: pointer;
-    background-color: var(--accent-color, #007bff); /* Added default for accent-color */
+    background-color: var(--accent-color, #007bff);
     transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background-color: var(--primary-color, #0056b3); /* Added default for primary-color */
+    background-color: var(--primary-color, #0056b3);
 }
 
 .contact-info {
@@ -125,7 +124,7 @@
     gap: 20px;
 }
 
-/* Se eliminan las siguientes reglas CSS ya que los iconos no existirán:
+/* 
 .contact-linkedin,
 .contact-github,
 .contact-gmail {
@@ -151,10 +150,9 @@
     line-height: 20px;
 }
 
-/* Form validation styles */
 .form-input.error,
 .form-textarea.error {
-    border: 1px solid red; /* Ensure border is visible */
+    border: 1px solid red;
     background-color: rgba(255, 0, 0, 0.05);
 }
 
@@ -171,20 +169,18 @@
     margin-top: 10px;
     text-align: center;
     background-color: rgba(0, 255, 0, 0.1);
-    border-radius: var(--border-radius-sm, 4px); /* Added default for border-radius */
+    border-radius: var(--border-radius-sm, 4px);
 }
 
-/* Form focus states */
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--primary-color, #0056b3); /* Added default for primary-color */
-    box-shadow: 0 0 0 2px rgba(55, 128, 127, 0.2); /* Consider making this color a variable */
+    border-color: var(--primary-color, #0056b3);
+    box-shadow: 0 0 0 2px rgba(55, 128, 127, 0.2);
 }
 
-/* Submit button hover and active states */
 .submit-button:hover {
-    background-color: var(--accent-color-dark, #0056b3); /* Added a darker accent or use primary */
+    background-color: var(--accent-color-dark, #0056b3);
     transform: translateY(-1px);
 }
 

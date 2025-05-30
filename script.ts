@@ -198,14 +198,10 @@ function setupProjectSearch(): void {
     });
 }
 
-// Asegúrate de llamar a esta función cuando el DOM esté cargado,
-// similar a como manejas otros scripts.
-// Por ejemplo, si tienes un evento DOMContentLoaded:
+import AppRouter from './AppRouter'; // Asegúrate que la ruta al archivo sea correcta
+
 document.addEventListener('DOMContentLoaded', () => {
-    // ... tus otras inicializaciones ...
+    AppRouter.init();
     setupProjectSearch(); 
     // ... cualquier otra función que se ejecute al cargar el DOM ...
 });
-
-// Si ya tienes una función que se ejecuta en DOMContentLoaded,
-// simplemente añade la llamada a setupProjectSearch() dentro de ella.
