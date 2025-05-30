@@ -1,9 +1,7 @@
-// d:\Web_Portafolio\AppRouter.ts
 
-// Define the structure for a function that renders a view
 type ViewRenderer = () => HTMLElement;
 
-// Define the routes and their corresponding rendering functions
+
 const viewRenderers: Record<string, ViewRenderer> = {
     "/": () => {
        

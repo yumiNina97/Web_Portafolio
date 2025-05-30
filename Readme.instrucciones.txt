@@ -1,0 +1,6 @@
+/*Local storage for data persistence
+item list use sigleton  for list observer  or proxy  event dispatcher
+apply command  design pattern for search and save 
+use mixin to extend functionality when needed
+create a search bar web component with shadow DOM and local styles 
+create save button  web component whithout shadow DOM*/
