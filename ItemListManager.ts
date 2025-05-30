@@ -1,11 +1,10 @@
-// ItemListManager.ts
+
 
 interface Item {
     id: number | string;
-    // ... otras propiedades
+
 }
 
-// Interfaz para los observadores
 interface ListObserver {
     update(items: Item[]): void;
 }
@@ -16,7 +15,7 @@ class ItemListManager {
     private observers: ListObserver[] = [];
 
     private constructor() {
-        // Cargar ítems desde localStorage si existen
+        
         const storedItems = localStorage.getItem('projectItems');
         if (storedItems) {
             this.items = JSON.parse(storedItems);
@@ -43,7 +42,7 @@ class ItemListManager {
     }
 
     public getItems(): Item[] {
-        return [...this.items]; // Devuelve una copia para evitar mutaciones externas directas
+        return [...this.items]; 
     }
 
     public addObserver(observer: ListObserver): void {
@@ -65,17 +64,5 @@ class ItemListManager {
     }
 }
 
-// Ejemplo de uso:
-// const listManager = ItemListManager.getInstance();
-
-// class MyComponent implements ListObserver {
-//     constructor() {
-//         listManager.addObserver(this);
-//     }
-//     update(items: Item[]) {
-//         console.log('La lista ha cambiado:', items);
-//         // Actualizar la UI
-//     }
-// }
 
 export default ItemListManager;

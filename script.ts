@@ -198,10 +198,10 @@ function setupProjectSearch(): void {
     });
 }
 
-import AppRouter from './AppRouter'; // Asegúrate que la ruta al archivo sea correcta
+import AppRouter from './AppRouter'; 
 
 document.addEventListener('DOMContentLoaded', () => {
     AppRouter.init();
     setupProjectSearch(); 
-    // ... cualquier otra función que se ejecute al cargar el DOM ...
+
 });
