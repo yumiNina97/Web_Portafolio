@@ -14,11 +14,11 @@
 :root {
     --primary-color: #2c3e50; 
     --secondary-color: #3498db; 
-    --accent-color: #e74c3c; /* Rojo para llamadas a la acción o alertas */
+    --accent-color: #e74c3c; 
     --background-color: #ecf0f1;
-    --text-color: #34495e; /* Gris oscuro para texto general */
+    --text-color: #34495e; 
     --text-color-light: #ffffff;
-    --card-background-color: #ffffff; /* Blanco para el fondo de las tarjetas */
+    --card-background-color: #ffffff; 
     --border-color: #bdc3c7; 
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --border-radius-small: 5px;
@@ -45,7 +45,7 @@ body {
     gap: 20px;
     background-color: var(--background-color);
     color: var(--text-color);
-    padding-top: 80px; /* Ajustar según la altura de la barra de navegación */
+    padding-top: 80px; 
     line-height: 1.6;
 }
 
@@ -106,7 +106,7 @@ a:hover {
     transform: translateY(0);
 }
 
-/* Estilos para contenedores y secciones generales */
+
 .portfolio-container {
     width: 90%;
     max-width: 1200px;
@@ -127,7 +127,7 @@ section {
     margin: 0 auto;
 }
 
-/* Media Queries para Responsividad (ejemplo de Web_Portafolio-sprint4/base.css) */
+
 @media (max-width: 992px) {
     .section-title {
         font-size: 2rem;
@@ -168,4 +168,3 @@ section {
     }
 }
 
-/* Aquí puedes añadir o sobreescribir estilos específicos de los componentes de Examen si es necesario */

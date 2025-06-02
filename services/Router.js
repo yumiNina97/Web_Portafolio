@@ -40,6 +40,8 @@ const Router = {
                 break;
             case '/blogs':
                 pageElement = document.createElement("blog-page");
+
+
                 break;
             case '/save':
                 pageElement = document.createElement("save-page");
@@ -51,7 +53,17 @@ const Router = {
                     console.log(pageElement);
                     pageElement.dataset.projectId = paramId;
                 }
+            
+                
+                if (route.startsWith("/blog/")) {
+                    pageElement = document.createElement("blog-details-page");
+                    const paramId = route.substring(route.lastIndexOf("/") + 1);
+
+                    console.log(pageElement);
+                    pageElement.dataset.blogId = paramId;
+                }
                 break;
+                
         }   
 
         mainElement.appendChild(pageElement);
