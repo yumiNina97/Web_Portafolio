@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('nav/nav.css');
+@import url('footer/footer.css');
+@import url('content/content.css');
+@import url('about-me/about-me.css');
+@import url('projects/projects.css');
+@import url('blog/blog.css');
+@import url('hero/hero.css');
+@import url('ProjectDetails/ProjectDetailsPage.css');
+@import url('savePage/SavePage.css');
+@import url('searchBar/SearchBar.css');
+
+
+:root {
+    --primary-color: #2c3e50; 
+    --secondary-color: #3498db; 
+    --accent-color: #e74c3c; /* Rojo para llamadas a la acción o alertas */
+    --background-color: #ecf0f1;
+    --text-color: #34495e; /* Gris oscuro para texto general */
+    --text-color-light: #ffffff;
+    --card-background-color: #ffffff; /* Blanco para el fondo de las tarjetas */
+    --border-color: #bdc3c7; 
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+    --border-radius-large: 15px;
+    --font-family-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family-main);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 80px; /* Ajustar según la altura de la barra de navegación */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius-small);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Estilos para contenedores y secciones generales */
+.portfolio-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 60px 0;
+    background-color: var(--card-background-color);
+    margin-bottom: 20px;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Media Queries para Responsividad (ejemplo de Web_Portafolio-sprint4/base.css) */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    body {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        gap: 15px;
+        padding-top: 60px;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Aquí puedes añadir o sobreescribir estilos específicos de los componentes de Examen si es necesario */

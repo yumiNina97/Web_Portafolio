@@ -1,0 +1,39 @@
+[
+  [
+    {
+      "id": 1,
+      "title": "El ascenso del ransomware",
+      "paragraph": "Los ataques de ransomware han evolucionado en complejidad. Grupos como Conti y LockBit han afectado empresas globales y gobiernos locales.",
+      "date": "24 de Noviembre, 2025",
+      "image": "assets/images/hack.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Análisis de la brecha en SolarWinds",
+      "paragraph": "Una de las filtraciones más sofisticadas de la última década. El ataque a SolarWinds dejó al descubierto vulnerabilidades en la cadena de suministro.",
+      "date": "20 de Noviembre, 2025",
+      "image": "assets/images/hack.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Dark Romance: Sombras en Florencia",
+      "paragraph": "Cuando Isabella conoció a Dante, un hacker perseguido por la INTERPOL, no sabía que su corazón quedaría atrapado entre secretos, pasión y traición.",
+      "date": "18 de Noviembre, 2025",
+      "image": "assets/images/romance.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Zero Trust: el nuevo paradigma",
+      "paragraph": "El modelo Zero Trust se impone en entornos corporativos. No se trata de confiar, sino de verificar todo acceso constantemente.",
+      "date": "15 de Noviembre, 2025",
+      "image": "assets/images/hack.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Crónica de un pentest real",
+      "paragraph": "Desde el escaneo inicial hasta la explotación de una vulnerabilidad de día cero, un equipo red team nos cuenta cómo penetraron una red bancaria.",
+      "date": "12 de Noviembre, 2025",
+      "image": "assets/images/hack.jpg"
+    }
+  ]
+]

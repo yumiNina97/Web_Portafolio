@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "imageURL": "assets/images/hack.jpg",
+      "title": "Cemento Camba S.A Pasante de TI",
+      "content": "Durante la pasantía, realicé el mantenimiento de equipos a nivel de software y hardware, brindé soporte técnico, preparé nuevos equipos para los funcionarios y actualicé el inventario. También organicé el mapeo y listado de las carpetas compartidas en la red de la empresa.",
+      "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+      "likes": "38",
+      "save": "false",
+      "like": "false"
+    },
+    {
+      "id": 2,
+      "imageURL": "assets/images/hack.jpg",
+      "title": "Entidad de Depósito de Valores EDV- Riesgos",
+      "content": "Realice una pasantía en el área de SOC (Centro de Operaciones de Seguridad) en ciberseguridad y seguridad física. Durante este periodo, mis responsabilidades incluyeron el monitoreo mediante herramientas de ciberseguridad y la supervisión de la seguridad física de la empresa.",
+      "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+      "likes": "12",
+      "save:": "false",
+      "like": "false"
+    },
+    {
+      "id": 3,
+      "imageURL": "assets/images/hack.jpg",
+      "title": "Universidad Católica UCB Centro de cómputo",
+      "content": "Como asistente del centro de cómputo, mi función principal consistió en brindar soporte técnico y operativo en el entorno de tecnología de la información. Mi objetivo fue garantizar el funcionamiento eficiente y confiable de la infraestructura informática de los laboratorios de la universidad",
+      "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+      "likes": "56",
+      "save": "false",
+      "like": "false"
+    },
+    {
+      "id": 4,
+      "imageURL": "assets/images/hack.jpg",
+      "title": "Analizador de malware con Python",
+      "content": "Descompone ejecutables maliciosos, identifica patrones y reporta indicadores de compromiso. Utiliza YARA y pandas.",
+      "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+      "likes": "19",
+      "save": "false",
+      "like": "false"
+    },
+    {
+      "id": 5,
+      "imageURL": "assets/images/romance.jpg",
+      "title": "Cartas encriptadas",
+      "content": "Una novela epistolar donde el misterio y la pasión se cruzan en mensajes cifrados. Disponible como app con puzzles de descifrado.",
+      "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+      "likes": "88",
+      "save": "false",
+      "like": "false"
+    },
+    {
+        "id": 1,
+        "imageURL": "assets/images/hack.jpg",
+        "title": "Cemento Camba S.A Pasante de TI",
+        "content": "Durante la pasantía, realicé el mantenimiento de equipos a nivel de software y hardware, brindé soporte técnico, preparé nuevos equipos para los funcionarios y actualicé el inventario. También organicé el mapeo y listado de las carpetas compartidas en la red de la empresa.",
+        "linkedinURL": "www.linkedin.com/in/yuvincaninaurquiola",
+        "likes": "38",
+        "save": "false",
+        "like": "false"
+      }
+  ]
+  
