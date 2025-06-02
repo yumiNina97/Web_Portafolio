@@ -26,55 +26,6 @@ export default class AboutMePage extends BaseHTMLElement {
         })
 
 
-        
-
-        const mutationObserver = new MutationObserver((entries) => {
-
-            const target = paragraph.innerText;
-            const data = target;
-            const lines = data.split("\n").filter(line => line != "");
-    
-            for(let i = 0; i < lines.length; i++){
-                const words = lines[i].split(" ");
-
-                if(words.length == 0)
-                    continue;
-
-                const tag = Markdown[words[0]];
-                
-                if(!tag)
-                    continue;
-
-                let newLine;
-
-                const newLineContent = words.slice(1).join(" ");
-                
-                if(tag == "ul") {
-                    newLine = `<${tag}><li class="about-me__list-style--inside">${newLineContent}</li></${tag}>`
-                }
-                else {
-                    newLine = `<${tag}>${newLineContent}</${tag}>`;
-                }
-               
-                lines[i] = newLine;
-            }
-
-            
-            if(lines.length === 0){
-                preview.innerHTML = "Add some text to my description here.";
-            }
-            else {
-                preview.innerHTML = lines.join("\n");
-            }
-            
-        })
-
-        mutationObserver.observe(paragraph, {
-            characterData: true,
-            subtree: true,
-            characterDataOldValue: true
-        });
-
         const fragment = new DocumentFragment();
         
         fragment.appendChild(aboutMe);
