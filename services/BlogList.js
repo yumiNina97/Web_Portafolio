@@ -4,21 +4,18 @@ import { Commnad } from "./SaveCommand.js";
 import { COMMANDS } from "./SaveCommand.js";
 import { CommandExecutor } from "./SaveCommand.js";
 
-class BlogListList {
-
-    #Blog = [];
+class BlogList {
+    #blogs = [];
     #limitedView = true;
 
-    get blog() {
-
+    get blogs() {
         if(this.#limitedView)
-            return this.#Blog.slice(0, 3);
-
-        return this.#Blog;
+            return this.#blogs.slice(0, 3);
+        return this.#blogs;
     }
 
-    get allBlog() {
-        return this.#Blog;
+    get allBlogs() {
+        return this.#blogs;
     }
 
     get limitedView() {
@@ -27,11 +24,11 @@ class BlogListList {
 
     static instance = null;
     static {
-        this.instance = new ProjectList();
+        this.instance = new BlogList();
     }
 
-    constructor(){
-        if(ProjectList.instance)
+    constructor() {
+        if(BlogList.instance)
             throw new Error("Ya existe una instancia");
     }
 
@@ -40,64 +37,33 @@ class BlogListList {
     }
 
     find(id) {
-        return this.#Blog.find(project => project.id == id);
+        return this.#blogs.find(blog => blog.id == id);
     }
 
     addLike(id) {
-        const project = this.find(id);
-        project.likes = Number(project.likes) + 1;
-        project.like = "true";
-
+        const blog = this.find(id);
+        blog.likes = Number(blog.likes) + 1;
+        blog.like = "true";
         this.notify();
     }
 
     removeLike(id) {
-        const project = this.find(id);
-        project.likes = Number(project.likes) - 1;
-        project.like = "false";        
-        
+        const blog = this.find(id);
+        blog.likes = Number(blog.likes) - 1;
+        blog.like = "false";
         this.notify();
     }
 
-
-    saveProject(id) {
-        const project = this.find(id);
-        project.save = "true";   
-
-        this.notify();
-        const command = new Commnad(COMMANDS.SAVE, project);
-        CommandExecutor.execute(command);
-        
-    }
-
-    unsaveProject(id) {
-        const project = this.find(id);
-        project.save = "false";
-
-        const command = new Commnad(COMMANDS.UNSAVE, project);
-        CommandExecutor.execute(command);
-
+    setBlogs(blogs) {
+        this.#blogs = blogs;
         this.notify();
     }
 
-
-    addProject(project) {
-        this.#Blog.push(project);
-
-        this.notify();
-    }
-
-    setBlog(blog) {
-        this.#Blog = blog;
-    }
-
-    seeMore(){
+    seeMore() {
         this.#limitedView = false;
+        this.notify();
     }
-
 }
 
-
 Object.assign(BlogList.prototype, observerMixin);
-
-export default BlogListList;
+export default BlogList;
