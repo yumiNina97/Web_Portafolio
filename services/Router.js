@@ -1,5 +1,10 @@
 const Router = {
     init() {
+        if (!document.getElementById('main')) {
+            const main = document.createElement('main');
+            main.id = 'main';
+            document.body.appendChild(main);
+        }
         const links = document.querySelectorAll(".nav__item a");
         links.forEach((link) => {
             link.addEventListener("click", (event) => {
@@ -19,17 +24,22 @@ const Router = {
 
 
     go(route, saveToHistory = false) {
-
-        if(saveToHistory)
+        if(saveToHistory) {
             history.pushState({ route }, "", route);
+        }
 
-        let blockElement = null;
         const mainElement = document.getElementById('main');
-        let pageElement = null;
+        if (!mainElement) {
+            console.error('Main element not found');
+            return;
+        }
+
         mainElement.innerHTML = "";
+        let pageElement = null;
 
         switch(route){
             case '/':
+            case '':
                 pageElement = document.createElement("home-page");
                 break;
             case '/about-me':
@@ -42,6 +52,7 @@ const Router = {
                 pageElement = document.createElement("blog-page");
                 break;
             default:
+                pageElement = document.createElement("home-page");
                 break;
         }
 

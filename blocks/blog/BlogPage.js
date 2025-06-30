@@ -1,7 +1,7 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import ApiBlog from "../../services/ApiBlog.js";
 
-export default class BlogPage extends BaseHTMLElement {
+class BlogPage extends BaseHTMLElement {
 
     constructor() {
         super();
@@ -16,7 +16,32 @@ export default class BlogPage extends BaseHTMLElement {
         
         const observerBlock = blockElement.querySelector(".blog__observer")
         const observer = new IntersectionObserver((entries) => {
-            this.loadBlogs();
+            if (entries[0].isIntersecting) {
+                this.loadBlogs();
+            }
+        });
+        
+        observer.observe(observerBlock);
+    }
+
+    async loadBlogs() {
+        const blogs = await ApiBlog.getBlogs();
+        const container = this.shadowRoot.querySelector('.blog__container');
+        
+        blogs.forEach(blog => {
+            const article = document.createElement('article');
+            article.classList.add('blog__card');
+            article.innerHTML = `
+                <h3 class="blog__card-title">${blog.title}</h3>
+                <p class="blog__card-description">${blog.description}</p>
+                <a href="${blog.url}" target="_blank" class="blog__card-link">Leer más</a>
+            `;
+            container.appendChild(article);
+        });
+    }
+}
+
+customElements.define("blog-page", BlogPage);
         })
 
         observer.observe(observerBlock, { threshold: 0.2 });

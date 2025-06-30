@@ -1,7 +1,7 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import Markdown from "../../services/Markdown.js";
 
-export default class AboutMePage extends BaseHTMLElement {
+class AboutMePage extends BaseHTMLElement {
     constructor() {
         super();
     }
@@ -18,6 +18,15 @@ export default class AboutMePage extends BaseHTMLElement {
         preview.addEventListener("click", (event) => {
             paragraph.classList.remove("about-me__paragraph--hidden");
             preview.classList.add("about-me__paragraph--hidden");
+        });
+
+        this.shadowRoot.appendChild(aboutMe);
+        this.shadowRoot.appendChild(profile);
+        await this.loadCSS("/blocks/about-me/about-me.css");
+    }
+}
+
+customElements.define("about-me-page", AboutMePage);
         })
 
         paragraph.addEventListener("blur", (event) => {
