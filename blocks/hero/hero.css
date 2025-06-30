@@ -26,7 +26,7 @@
 
 .hero__title {
     font-size: 3.75rem;
-    color: #A0C878;
+    color: #43a9ad;
     font-weight: 700;
 }
 
@@ -106,7 +106,7 @@
     font-weight: 700;
     color: #FFFFFF;
     border: none;
-    background-color: #A0C878;
+    background-color: #43a9ad;
     border-radius: 10px;
     cursor: pointer;
 }

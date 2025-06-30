@@ -20,7 +20,7 @@
 .blog__title {
     font-size: 3.75rem;
     color: #FFFFFF;
-    background-color: #A0C878;
+    background-color: #43a9ad;
     width: 100%;
     text-align: center;
     border-radius: 20px;
@@ -62,7 +62,7 @@
 
 .blog__card-title {
     font-weight: 700;
-    color: #A0C878;
+    color: #43a9ad;
     font-size: 1.375rem;
 }
 
@@ -75,7 +75,7 @@
 
 .blog__card-date {
     font-weight: 900;
-    color: #A0C878;
+    color: #43a9ad;
     font-size: 0.8125rem;
 }
 

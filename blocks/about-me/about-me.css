@@ -14,7 +14,7 @@
 
 .about-me {
     width: 100%;
-    background-color: #A0C878;
+    background-color: #43a9ad;
     border-radius: 20px;
     padding: 1.875rem;
     color: #FFFFFF;
@@ -117,7 +117,7 @@
 }
 
 .profile__education, .profile__hobbies, .profile__skills {
-    background-color: #A0C878;
+    background-color: #43a9ad;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     width: 35rem;
