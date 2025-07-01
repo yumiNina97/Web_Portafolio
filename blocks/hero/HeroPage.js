@@ -1,11 +1,9 @@
 import BaseHTMLElement from "../base/BaseHTMLElement.js";
 
-export default class HeroPage extends BaseHTMLElement {
-
+class HeroPage extends BaseHTMLElement {
     constructor() {
         super();
     }
-
 
     async connectedCallback() {
         const blockElement = document.getElementById('hero-template').content.cloneNode(true).firstElementChild;
@@ -14,6 +12,4 @@ export default class HeroPage extends BaseHTMLElement {
     }
 }
 
-
-
-customElements.define("home-page", HeroPage);
+customElements.define("hero-page", HeroPage);

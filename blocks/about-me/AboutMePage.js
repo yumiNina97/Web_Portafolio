@@ -6,44 +6,29 @@ class AboutMePage extends BaseHTMLElement {
         super();
     }
 
-    async connectedCallback(){
+    async connectedCallback() {
         const aboutMe = document.getElementById('about-me-template').content.cloneNode(true).firstElementChild;
         const profile = document.getElementById('profile-template').content.cloneNode(true).firstElementChild;
 
         const paragraph = aboutMe.querySelector(".about-me__paragraph");
-        const preview  = aboutMe.querySelector(".about-me__paragraph-view");
+        const preview = aboutMe.querySelector(".about-me__paragraph-view");
 
-       
-       
         preview.addEventListener("click", (event) => {
             paragraph.classList.remove("about-me__paragraph--hidden");
             preview.classList.add("about-me__paragraph--hidden");
         });
 
-        this.shadowRoot.appendChild(aboutMe);
-        this.shadowRoot.appendChild(profile);
-        await this.loadCSS("/blocks/about-me/about-me.css");
-    }
-}
-
-customElements.define("about-me-page", AboutMePage);
-        })
-
         paragraph.addEventListener("blur", (event) => {
             paragraph.classList.add("about-me__paragraph--hidden");
             preview.classList.remove("about-me__paragraph--hidden");
-        })
-
-
-        
+        });
 
         const mutationObserver = new MutationObserver((entries) => {
-
             const target = paragraph.innerText;
             const data = target;
             const lines = data.split("\n").filter(line => line != "");
     
-            for(let i = 0; i < lines.length; i++){
+            for(let i = 0; i < lines.length; i++) {
                 const words = lines[i].split(" ");
 
                 if(words.length == 0)
@@ -55,28 +40,23 @@ customElements.define("about-me-page", AboutMePage);
                     continue;
 
                 let newLine;
-
                 const newLineContent = words.slice(1).join(" ");
                 
                 if(tag == "ul") {
                     newLine = `<${tag}><li class="about-me__list-style--inside">${newLineContent}</li></${tag}>`
-                }
-                else {
+                } else {
                     newLine = `<${tag}>${newLineContent}</${tag}>`;
                 }
                
                 lines[i] = newLine;
             }
 
-            
-            if(lines.length === 0){
+            if(lines.length === 0) {
                 preview.innerHTML = "Add some text to my description here.";
-            }
-            else {
+            } else {
                 preview.innerHTML = lines.join("\n");
             }
-            
-        })
+        });
 
         mutationObserver.observe(paragraph, {
             characterData: true,
@@ -85,7 +65,6 @@ customElements.define("about-me-page", AboutMePage);
         });
 
         const fragment = new DocumentFragment();
-        
         fragment.appendChild(aboutMe);
         fragment.appendChild(profile);
 
@@ -93,6 +72,5 @@ customElements.define("about-me-page", AboutMePage);
         await this.loadCSS("/blocks/about-me/about-me.css");
     }
 }
-
 
 customElements.define("about-me-page", AboutMePage);

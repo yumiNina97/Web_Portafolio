@@ -94,20 +94,8 @@ class ProjectPage extends BaseHTMLElement {
                 }
             });
             heartIcon.hasListener = true;
-         }
-                ProjectList.getInstance().addLike(cardId);
-            }
-            else {
-                ProjectList.getInstance().removeLike(cardId);
-            }
-            
-            this.render();
-        });
-
-            
+        }
     }
 }
-
-
 
 customElements.define("project-page", ProjectPage);

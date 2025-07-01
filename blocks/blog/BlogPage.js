@@ -2,7 +2,6 @@ import BaseHTMLElement from "../base/BaseHTMLElement.js";
 import ApiBlog from "../../services/ApiBlog.js";
 
 class BlogPage extends BaseHTMLElement {
-
     constructor() {
         super();
     }
@@ -14,50 +13,25 @@ class BlogPage extends BaseHTMLElement {
 
         ApiBlog.reset();
         
-        const observerBlock = blockElement.querySelector(".blog__observer")
+        const observerBlock = blockElement.querySelector(".blog__observer");
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 this.loadBlogs();
             }
-        });
+        }, { threshold: 0.2 });
         
         observer.observe(observerBlock);
     }
 
     async loadBlogs() {
-        const blogs = await ApiBlog.getBlogs();
-        const container = this.shadowRoot.querySelector('.blog__container');
-        
-        blogs.forEach(blog => {
-            const article = document.createElement('article');
-            article.classList.add('blog__card');
-            article.innerHTML = `
-                <h3 class="blog__card-title">${blog.title}</h3>
-                <p class="blog__card-description">${blog.description}</p>
-                <a href="${blog.url}" target="_blank" class="blog__card-link">Leer más</a>
-            `;
-            container.appendChild(article);
-        });
-    }
-}
-
-customElements.define("blog-page", BlogPage);
-        })
-
-        observer.observe(observerBlock, { threshold: 0.2 });
-    }
-
-    async loadBlogs() {
         const container = this.shadowRoot.querySelector(".blog__cards");
-
         const blogs = await ApiBlog.getNextBlogs();
         
-        if(!blogs)
-            return;
+        if (!blogs) return;
 
         const fragment = new DocumentFragment();
 
-        for(let blog of blogs) {
+        for (let blog of blogs) {
             const template = document.getElementById("blog-card-template");
             const element = template.content.cloneNode(true).firstElementChild;
 
@@ -71,15 +45,11 @@ customElements.define("blog-page", BlogPage);
             contentElement.textContent = blog.paragraph;
             dateElement.textContent = blog.date;
 
-
             fragment.appendChild(element);
         }
 
         container.appendChild(fragment);
-
-
     }
 }
-
 
 customElements.define("blog-page", BlogPage);

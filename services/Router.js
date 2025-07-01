@@ -38,9 +38,8 @@ const Router = {
         let pageElement = null;
 
         switch(route){
-            case '/':
-            case '':
-                pageElement = document.createElement("home-page");
+            case '/':            case '':
+                pageElement = document.createElement("hero-page");
                 break;
             case '/about-me':
                 pageElement = document.createElement("about-me-page");
@@ -52,7 +51,7 @@ const Router = {
                 pageElement = document.createElement("blog-page");
                 break;
             default:
-                pageElement = document.createElement("home-page");
+                pageElement = document.createElement("hero-page");
                 break;
         }
 
